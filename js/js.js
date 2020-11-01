@@ -56,3 +56,45 @@ function envio(){
     
 
 }
+
+class Frutas{
+    constructor(precio,kilos, nombre){
+        this.kilos = kilos;
+        this.precio = precio;
+        this.nombre = nombre;
+    }
+    getNombre(){
+        return this.nombre;
+    }
+
+    getKilos(){
+        return this.kilos;
+    }
+
+    getPrecio(){
+        return this.precio;
+    }
+
+    sumardeKilos(kilos){
+        this.kilos += kilos;
+    }
+}
+
+
+class FrutasVerano extends Frutas{
+    constructor(kilos, precio, nombre, proximidadSiNo){
+        super(kilos, precio, nombre);
+        this.proximidadSiNo = proximidadSiNo;
+       
+    }
+}
+
+class FrutasInvierno extends Frutas{
+    constructor(kilos, precio, nombre, neveraSiNo){
+        super(kilos, precio, nombre);
+        this.neveraSiNo = neveraSiNo;
+    }
+    getConservar(){
+        return this.neveraSiNo;
+    }
+}
