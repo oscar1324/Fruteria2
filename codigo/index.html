@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/js.js"></script> <!-- Creamos el enlace hacia el script para realizar las funciones-->
+    <link type="text/css" href="../css/estilos.css"><!-- Creamos enlace ppor si queremos hacer uso de estilos para decorar la página web-->
+</head>
+<body style="background-color:antiquewhite;">  
+    <h1>Fruterias Sanchón S.L</h1>
+    <!-- Estructuramos cada apartado con divs insertando las imagenes seleccioanadas además de las funciones-->
+    <div class="general"><img src="../imagenes/papaya.jpg" onclick="acumulador(0);" >Papaya: 1,56 €/kg</div>
+    <input type="text" name="texto" placeholder="numero de kilos">
+
+    <div class="general"><img src="../imagenes/fram.jpg" onclick="acumulador(1); ">Frambuesa 15,92 €/kg</div>
+    <input type="text" name="texto" placeholder="numero de kilos">
+
+    <div class="general"><img src="../imagenes/arandanos.jpg" onclick="acumulador(2);">Arandanos 16 €/kg</div>
+    <input type="text" name="texto" placeholder="numero de kilos">
+
+    <div class="general"><img src="../imagenes/sandia.jpg" onclick="acumulador(3);">Sandía 2,03€/kg</div>
+    <input type="text" name="texto" placeholder="numero de kilos">
+
+    <div class="general"><img src="../imagenes/platanos.jpg" onclick="acumulador(4); ">Platanos 1,95€/kg</div>
+    <input type="text" name="texto" placeholder="numero de kilos">
+
+    <div class="general"><img src="../imagenes/melocoton.jpg" onclick="acumulador(5); ">Melocotón 1,35€/kg</div>
+    <input type="text" name="texto" placeholder="numero de kilos">
+
+    <div class="general"><img src="../imagenes/mango.jpg"    onclick="acumulador(6); ">Mango 2.35€/kg</div>
+    <input type="text" name="texto" placeholder="numero de kilos">
+
+    <div class="general"><img src="../imagenes/aguaxate.jpg" onclick="acumulador(7);">Aguacate 4,69€/kg</div>
+    <input type="text" name="texto" placeholder="numero de kilos">
+
+    <div class="general"><img src="../imagenes/nispero.jpg"  onclick="acumulador(8);">Nispero 5,38€/kg</div>
+    <input type="text" name="texto" placeholder="numero de kilos">
+
+    <div class="general" ><img src="../imagenes/guayaba.jpg" onclick="acumulador(9);">Guayaba 14,95 €/kg</div>
+    <input type="text" name="texto" placeholder="numero de kilos">
+    <!-- meter siempre el numero dentro para que lo identifique-->
+    <!--botón-->
+    
+    <div id="final">
+        <input id="button" type="submit" value="envio" onclick="envio()"><br>
+
+    </div>
+</body>
+</html>

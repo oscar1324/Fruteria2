@@ -1,0 +1,16 @@
+.general{
+    border: chocolate 1px solid;
+
+}
+
+body{
+    background-color: blue;
+}
+#final{
+    margin-top: 10px;
+    background-color: blue;
+    height: 50px;
+    width: 70px;
+    border: solid;
+    border: black;
+}
