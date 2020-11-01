@@ -98,3 +98,14 @@ class FrutasInvierno extends Frutas{
         return this.neveraSiNo;
     }
 }
+
+var papaya = new FrutasVerano("Papaya", 1.56,true);
+var frambuesa = new FrutasVerano("Frambuesa",15,92 ,true);
+var arandanos = new FrutasVerano("Arandanos", 16,true);
+var sandia  = new FrutasVerano("Sandia",2.03 ,true);
+var platanos  = new FrutasVerano("Platanos",1.95 ,true);
+var melocoton  = new FrutasVerano("Melocotón", 1.35,true);
+var mango  = new FrutasVerano("Mango", 2.35,true);
+var aguacate  = new FrutasVerano("Aguacate",4.69 ,true);
+var nispero  = new FrutasVerano("nispero",5.38 ,true);
+var guayaba  = new FrutasInvierno("guayaba",14.95,false);
