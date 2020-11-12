@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/js.js"></script> <!-- Creamos el enlace hacia el script para realizar las funciones-->
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css"><!-- Creamos enlace ppor si queremos hacer uso de estilos para decorar la página web-->
+</head>
+<body>  
+    <div id="container">
+        <h1>Fruterias Sanchón S.L</h1>
+        <!-- Estructuramos cada apartado con divs insertando las imagenes seleccioanadas además de las funciones-->
+        <div id="uno">
+            <div class="general">
+                <img src="../imagenes/papaya.jpg" width="150px" height="150px" onclick="acumulador(0);" >Papaya: 1,56 €/kg
+                <input type="text" name="texto" placeholder="numero de kilos">
+            </div>
+        
+            <div class="general">
+                <img src="../imagenes/fram.jpg" width="150px" height="150px" onclick="acumulador(1); ">Frambuesa 15,92 €/kg
+                <input type="text" name="texto" placeholder="numero de kilos">
+            </div>
+           
+        </div>
+        <div class="general">
+            <img src="../imagenes/papaya.jpg" width="150px" height="150px" onclick="acumulador(0);" >Papaya: 1,56 €/kg
+            <input type="text" name="texto" placeholder="numero de kilos">
+        </div>
+    
+        <div class="general">
+            <img src="../imagenes/fram.jpg" width="150px" height="150px" onclick="acumulador(1); ">Frambuesa 15,92 €/kg
+            <input type="text" name="texto" placeholder="numero de kilos">
+        </div>
+       
+    
+        <div class="general">
+            <img src="../imagenes/arandanos.jpg" width="150px" height="150px" onclick="acumulador(2);">Arandanos 16 €/kg
+            <input type="text" name="texto" placeholder="numero de kilos">
+        </div>
+      
+    
+        <div class="general">
+            <img src="../imagenes/sandia.jpg" width="150px" height="150px" onclick="acumulador(3);">Sandía 2,03€/kg  
+            <input type="text" name="texto" placeholder="numero de kilos">
+        </div>
+       
+    
+        <div class="general">
+            <img src="../imagenes/platanos.jpg" width="150px" height="150px" onclick="acumulador(4); ">Platanos 1,95€/kg
+            <input type="text" name="texto" placeholder="numero de kilos">
+        </div>
+      
+    
+        <div class="general">
+            <img src="../imagenes/melocoton.jpg" width="150px" height="150px" onclick="acumulador(5); ">Melocotón 1,35€/kg
+            <input type="text" name="texto" placeholder="numero de kilos">
+        </div>
+        
+    
+        <div class="general">
+            <img src="../imagenes/mango.jpg"  width="150px" height="150px"  onclick="acumulador(6); ">Mango 2.35€/kg
+            <input type="text" name="texto" placeholder="numero de kilos">
+        </div>
+       
+        <div class="general">
+            <img src="../imagenes/aguaxate.jpg" width="150px" height="150px" onclick="acumulador(7);">Aguacate 4,69€/kg
+            <input type="text" name="texto" placeholder="numero de kilos">
+        </div>
+      
+        <div class="general">
+            <img src="../imagenes/nispero.jpg" width="150px" height="150px" onclick="acumulador(8);">Nispero 5,38€/kg
+            <input type="text" name="texto" placeholder="numero de kilos">
+        </div>
+        
+        <div class="general" >
+            <img src="../imagenes/guayaba.jpg" width="150px" height="150px" onclick="acumulador(9);">Guayaba 14,95 €/kg
+            <input type="text" name="texto" placeholder="numero de kilos">
+        </div>
+    </div>
+    <div id="Derecha" >
+        <p>parte derecha</p>
+    </div>
+    <div id="ElFormulario">
+        <p>meter formulario de casa</p>
+    </div>
+
+    <div id="final">
+        <input id="button" type="submit" value="envio" onclick="envio();"><br>
+    </div>
+
+</body>
+</html>
