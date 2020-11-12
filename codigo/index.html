@@ -12,18 +12,18 @@
         <h1>Fruterias Sanchón S.L</h1>
         <!-- Estructuramos cada apartado con divs insertando las imagenes seleccioanadas además de las funciones-->
         <div id="uno">
-            <div class="general">
-                <img src="../imagenes/papaya.jpg" width="150px" height="150px" onclick="acumulador(0);" >Papaya: 1,56 €/kg
+            <div class="general" id="uno">
+                <img src="../imagenes/papaya.jpg" width="150px" height="150px" onclick="acumulador(0);" >Papaya: 1,56 €/kg<br>
                 <input type="text" name="texto" placeholder="numero de kilos">
             </div>
         
-            <div class="general">
+            <div class="general" >
                 <img src="../imagenes/fram.jpg" width="150px" height="150px" onclick="acumulador(1); ">Frambuesa 15,92 €/kg
                 <input type="text" name="texto" placeholder="numero de kilos">
             </div>
            
         </div>
-        <div class="general">
+        <div class="general" >
             <img src="../imagenes/papaya.jpg" width="150px" height="150px" onclick="acumulador(0);" >Papaya: 1,56 €/kg
             <input type="text" name="texto" placeholder="numero de kilos">
         </div>
@@ -82,7 +82,27 @@
         <p>parte derecha</p>
     </div>
     <div id="ElFormulario">
-        <p>meter formulario de casa</p>
+        <form>
+            <fieldset>
+                Nombre: <input type="text" name="nombre" placeholder="nombre"><br><br>
+                Apellidos: <input type="text" name="apellidos" placeholder="apellidos"><br><br>
+                Direccion: <input type="email" name="correo" placeholder="@gmail.com">
+                
+            </fieldset>
+            <fieldset>
+                ¿Pagas con tarjeta? <br>
+                <input type="radio" name="si">Si</input>
+                <input type="radio" name="no">No</input>
+            </fieldset>
+            <fieldset>
+                Agregar que campo si tienet tarjeta
+            </fieldset>
+            <fieldset>
+              <button type="submit" name="enviar" >Realizar pedido</button> <br>
+              <button type="reset" name="limpiar"> limpiar</button>
+            </fieldset>
+    
+        </form>
     </div>
 
     <div id="final">
