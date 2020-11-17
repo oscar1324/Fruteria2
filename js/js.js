@@ -114,15 +114,17 @@ var guayaba  = new FrutasInvierno("guayaba",14.95,false);
 
 function envioF(){
     ventana = window.open("", "pop-up", "width=500,height=300, toolbar=false, menubar=false, location=false");
-    let nombreF = document.getElementById("nombre");
-    let n
-    nombreF.innerHTML = n;
-    //let obtenNombre = nombreF.innerHTML;
-    let apellidoF = document.getElementById("apellidos");
-    let direccionF = document.getElementById("direccion");
+    let nombreF = document.getElementById("nombre").textContent;
+    let obtenN = nombreF.innerHTML;
 
 
-    ventana.document.write("Nombre: " + n + "<br>");
+    let apellidoF = document.getElementById("apellidos").textContent;
+    let obtenN = document.innerHTML;
+
+    let direccionF = document.getElementById("direccion").textContent;
+    let obtenD = document.innerHTML;
+
+    ventana.document.write("Nombre: " + obtenN + "<br>");
     ventana.document.write("Apelldios: " + apellidoF + "<br>");
     ventana.document.write("Direccion: " + direccionF + "<br>");
     ventana.document.write("<button onclick='opener.cerrar();'>Cerrar</button>");
@@ -131,11 +133,12 @@ function envioF(){
 
 
 
-
-window.onload=() =>{
-    let nombreF = document.getElementById("nombre");
-    let apellidoF = document.getElementById("apellidos");
-    let direccionF = document.getElementById("direccion");
+/**
+ *  window.onload=() =>{
+    let nombreF = document.getElementById("nombre").textContent;
+    let obtenN = document.nombreF.innerHTML;
+    let apellidoF = document.getElementById("apellidos").textContent;
+    let direccionF = document.getElementById("direccion").textContent;
     let tarjetaSI = document.getElementById("si");
     let tarjetaNO = documnet.getElementById("no");
     let correcto = true;
@@ -144,12 +147,11 @@ window.onload=() =>{
     form.addEventListener("submit", (event) => {
         if (todoCorrecto) {
             let ventanilla = window.open("./ventanaF.html", "pop-up", "width=500px height=300px");
+            let ventanilla
             event.preventDefault();
         }
     }, false)
-
-
-
-
-
 }
+ * 
+ * 
+ */
