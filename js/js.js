@@ -29,7 +29,7 @@ function envio(){
     let divEscribir;
     let contenidoFinal = " "; /* creo*/ 
     let multiplica = 0;
-    divEscribir=document.getElementById("final");
+    divEscribir=document.getElementById("Derecha");
     for (var i = 0; i < 10; i++) {
         if(cantidadFru[i] != 0){
             let multiplica = cantidadFru[i]*precioFru[i];
