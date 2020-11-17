@@ -8,11 +8,15 @@
     <link rel="stylesheet" type="text/css" href="../css/estilos.css"><!-- Creamos enlace ppor si queremos hacer uso de estilos para decorar la página web-->
 </head>
 <body>  
+    <form>
+        
+    </form>
     <div id="container">
         <h1>Fruterias Sanchón S.L</h1>
         <!-- Estructuramos cada apartado con divs insertando las imagenes seleccioanadas además de las funciones-->
-            <div class="general">
-                <img src="../imagenes/papaya.jpg" width="90px" height="90px" onclick="acumulador(0);" >Papaya: 1,56 €/kg
+
+          <div class="general" >
+                <img src="../imagenes/papaya.jpg" width="90px" height="90px" onclick="acumulador(0);">Papaya: 1,56 €/kg
                 <input type="text" name="texto" placeholder="numero de kilos">
             </div>
         
@@ -82,22 +86,22 @@
     <div id="ElFormulario">
         <form>
             <fieldset>
-                Nombre: <input type="text" name="nombre" placeholder="nombre">
-                Apellidos: <input type="text" name="apellidos" placeholder="apellidos">
-                Direccion: <input type="email" name="correo" placeholder="@gmail.com">
+                Nombre: <input type="text" name="nombre" placeholder="nombre" id="nombre" minlength="4" maxlength="15" required >
+                Apellidos: <input type="text" name="apellidos" placeholder="apellidos" id="apelldios" required>
+                Direccion: <input type="email" name="correo" placeholder="@gmail.com" id="direccion" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
                 
             </fieldset>
             <fieldset>
                 ¿Pagas con tarjeta? <br>
-                <input type="radio" name="si">Si</input>
-                <input type="radio" name="no">No</input>
+                <input type="radio" name="si" id="si">Si</input>
+                <input type="radio" name="no" id="no">No</input>
             </fieldset>
             <fieldset>
                 Agregar que campo si tienet tarjeta
             </fieldset>
             <fieldset>
-              <button type="submit" name="enviar" >Realizar pedido</button>
-              <button type="reset" name="limpiar"> limpiar</button>
+              <button type="submit" name="enviar" onclick="envioF();">Realizar pedido</button>
+              <input type="reset" name="limpiar"> limpiar</input>
             </fieldset>
     
         </form>
@@ -106,6 +110,7 @@
     <div id="final">
         <input id="button" type="submit" value="envio" onclick="envio();"><br>
     </div>
+
 
 </body>
 </html>

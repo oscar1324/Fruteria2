@@ -111,3 +111,45 @@ var mango  = new FrutasVerano("Mango", 2.35,true);
 var aguacate  = new FrutasVerano("Aguacate",4.69 ,true);
 var nispero  = new FrutasVerano("nispero",5.38 ,true);
 var guayaba  = new FrutasInvierno("guayaba",14.95,false);
+
+function envioF(){
+    ventana = window.open("", "pop-up", "width=500,height=300, toolbar=false, menubar=false, location=false");
+    let nombreF = document.getElementById("nombre");
+    let n
+    nombreF.innerHTML = n;
+    //let obtenNombre = nombreF.innerHTML;
+    let apellidoF = document.getElementById("apellidos");
+    let direccionF = document.getElementById("direccion");
+
+
+    ventana.document.write("Nombre: " + n + "<br>");
+    ventana.document.write("Apelldios: " + apellidoF + "<br>");
+    ventana.document.write("Direccion: " + direccionF + "<br>");
+    ventana.document.write("<button onclick='opener.cerrar();'>Cerrar</button>");
+
+}
+
+
+
+
+window.onload=() =>{
+    let nombreF = document.getElementById("nombre");
+    let apellidoF = document.getElementById("apellidos");
+    let direccionF = document.getElementById("direccion");
+    let tarjetaSI = document.getElementById("si");
+    let tarjetaNO = documnet.getElementById("no");
+    let correcto = true;
+
+
+    form.addEventListener("submit", (event) => {
+        if (todoCorrecto) {
+            let ventanilla = window.open("./ventanaF.html", "pop-up", "width=500px height=300px");
+            event.preventDefault();
+        }
+    }, false)
+
+
+
+
+
+}
