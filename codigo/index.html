@@ -17,57 +17,57 @@
         
         <div class="general">
             <img src="../imagenes/papaya.jpg" width="90px" height="90px" onclick="acumulador(0);" >Papaya: 1,56 €/kg
-            <input type="text" name="texto" placeholder="numero de kilos">
+            <input type="text" name="papaya" placeholder="numero de kilos">
         </div>
     
         <div class="general">
             <img src="../imagenes/fram.jpg" width="90px" height="90px" onclick="acumulador(1); ">Frambuesa 15,92 €/kg
-            <input type="text" name="texto" placeholder="numero de kilos">
+            <input type="text" name="frambuesa" placeholder="numero de kilos">
         </div>
        
     
         <div class="general">
             <img src="../imagenes/arandanos.jpg" width="90px" height="90px" onclick="acumulador(2);">Arandanos 16 €/kg
-            <input type="text" name="texto" placeholder="numero de kilos">
+            <input type="text" name="arandanos" placeholder="numero de kilos">
         </div>
       
     
         <div class="general">
             <img src="../imagenes/sandia.jpg" width="90px" height="90px" onclick="acumulador(3);">Sandía 2,03€/kg  
-            <input type="text" name="texto" placeholder="numero de kilos">
+            <input type="text" name="sandia" placeholder="numero de kilos">
         </div>
        
     
         <div class="general">
             <img src="../imagenes/platanos.jpg" width="90px" height="90px" onclick="acumulador(4); ">Platanos 1,95€/kg
-            <input type="text" name="texto" placeholder="numero de kilos">
+            <input type="text" name="platanos" placeholder="numero de kilos">
         </div>
       
     
         <div class="general">
             <img src="../imagenes/melocoton.jpg" width="90px" height="90px" onclick="acumulador(5); ">Melocotón 1,35€/kg
-            <input type="text" name="texto" placeholder="numero de kilos">
+            <input type="text" name="melocoton" placeholder="numero de kilos">
         </div>
         
     
         <div class="general">
             <img src="../imagenes/mango.jpg"  width="90px" height="90px"  onclick="acumulador(6); ">Mango 2.35€/kg
-            <input type="text" name="texto" placeholder="numero de kilos">
+            <input type="text" name="mango" placeholder="numero de kilos">
         </div>
        
         <div class="general">
             <img src="../imagenes/aguaxate.jpg" width="90px" height="90px" onclick="acumulador(7);">Aguacate 4,69€/kg
-            <input type="text" name="texto" placeholder="numero de kilos">
+            <input type="text" name="aguacate" placeholder="numero de kilos">
         </div>
       
         <div class="general">
             <img src="../imagenes/nispero.jpg" width="90px" height="90px" onclick="acumulador(8);">Nispero 5,38€/kg
-            <input type="text" name="texto" placeholder="numero de kilos">
+            <input type="text" name="nispero" placeholder="numero de kilos">
         </div>
         
         <div class="general" >
             <img src="../imagenes/guayaba.jpg" width="90px" height="90px" onclick="acumulador(9);">Guayaba 14,95 €/kg
-            <input type="text" name="texto" placeholder="numero de kilos">
+            <input type="text" name="guayaba" placeholder="numero de kilos">
         </div>
     </div>
     <div id="Derecha" >
@@ -88,12 +88,12 @@
                        <p id="pago">Tarjeta:<input type="radio" name="entrega" required></p>
                     </p>
                     <p>Tarjeta cliente:<br>
+                        <p id="tarjeta"><input id="codigoTarjeta" type="hidden" name="codigo"></p>
                         <p id="rr"><input id="si" type="radio" name="sino">Si</p>
                         <p id="ee"><input id="no" type="radio" name="sino">No</p>
                     </p>
                 </fieldset>
-
-                <input id="codigoTarjeta" type="hidden" name="codigo">
+                
                 <input type="submit" value="Realizar pedido">
                 <button type="reset" value="Limpiar formulario">Limpiar formulario</button>
             </fieldset>

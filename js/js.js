@@ -24,8 +24,6 @@ function acumulador(numero){
 // SEGUNDA FUNCION
 function envio(){
 
-
-
     let divEscribir;
     let contenidoFinal = " "; /* creo*/ 
     let multiplica = 0;
@@ -41,6 +39,9 @@ function envio(){
     contenidoFinal +="<p>Precio Medio: "+ parseInt(total/aux) + " € </p>";
     contenidoFinal+="<p>Precio Total: " + total + " Kilo </p>";
     divEscribir.innerHTML = contenidoFinal; // almacenar
+
+
+
 
     let contenidoplus = " ";
     divEscribir.innerHTML = contenidoplus; // almacenar
@@ -109,14 +110,14 @@ class FrutasInvierno extends Frutas{
     }
 }
 
-var papaya = new FrutasVerano("Papaya", 1.56,true);
-var frambuesa = new FrutasVerano("Frambuesa",15,92 ,true);
-var arandanos = new FrutasVerano("Arandanos", 16,true);
-var sandia  = new FrutasVerano("Sandia",2.03 ,true);
-var platanos  = new FrutasVerano("Platanos",1.95 ,true);
-var melocoton  = new FrutasVerano("Melocotón", 1.35,true);
-var mango  = new FrutasVerano("Mango", 2.35,true);
-var aguacate  = new FrutasVerano("Aguacate",4.69 ,true);
+var papaya = new FrutasVerano("papaya", 1.56,true);
+var frambuesa = new FrutasVerano("frambuesa",15,92 ,true);
+var arandanos = new FrutasVerano("arandanos", 16,true);
+var sandia  = new FrutasVerano("sandia",2.03 ,true);
+var platanos  = new FrutasVerano("platanos",1.95 ,true);
+var melocoton  = new FrutasVerano("melocotón", 1.35,true);
+var mango  = new FrutasVerano("mango", 2.35,true);
+var aguacate  = new FrutasVerano("aguacate",4.69 ,true);
 var nispero  = new FrutasVerano("nispero",5.38 ,true);
 var guayaba  = new FrutasInvierno("guayaba",14.95,false);
 
@@ -184,25 +185,9 @@ window.onload = function(){
             event.preventDefault();
         }
     },false);
-    document.getElementById("si").addEventListener('click',mostrarCodigoTarjeta,false);
+    document.getElementById("si").addEventListener('click',tarjeta,false);
 }
 
-function mostrarCodigoTarjeta(){
-    let codigo = document.getElementById("codigoTarjeta");
-    let botonSi = document.getElementById("si");
-    let botonNo = document.getElementById("no");
-
-    if(botonSi.checked){
-        
-    }
-}
-
-function ventana() {
-    let ventanita = window.open("", "pop-up", "width=500,height=300, toolbar=false, menubar=false, location=false");
-    ventanita.document.write(botoncin());
-    ventanita.document.write("<input type=button value=Terminar pedido><br>");
-    ventanita.document.write("<input type=button value=Volver>");
-}
 
 function validaciones(event){
 
@@ -257,4 +242,26 @@ function validaciones(event){
     }
 
     return true;
+}
+
+
+/** CREACION DE TARJETA */
+
+function tarjeta(){
+    var tarjetaCampo = document.getElementById("sino");
+    var campoCreado = document.createElement("p");
+    var campo = document.createElement("input");
+
+    tarjetaCampo.appendChild(campoCreado);
+    tarjetaCampo.appendChild(campo);
+
+    campoCreado.innerHTML = "Codigo del cliente";
+    campoCreado.setAttribute("id","codigoCliente");
+    campoCreado.setAttribute("for","codigoClienteFor");
+
+    campo.setAttribute("id","codigoCliente");
+    campo.setAttribute("name","codigoCliente");
+    campo.setAttribute("required","");
+    campo.setAttribute("pattern","[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}");
+    campoCreado.setAttribute();
 }
