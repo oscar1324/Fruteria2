@@ -45,13 +45,13 @@
   }
 /*/**/
 .general{
-    border: chocolate 1px solid;
+    border: rgb(223, 127, 58) 1px solid;
     float: left;
     width: 500px;
 }
 
 body{
-    background-color: coral;
+    background-color:rgb(76, 227, 238);
     width: 100%;
     height: 100%;
 }
@@ -64,9 +64,10 @@ body{
 #Derecha{
     margin-top: 80px;
     float: right;
-    width: 39%;
+    width: 20%;
     height: 582px;
     border: 1px solid;
+    overflow: scroll;
 
 }
 #ElFormulario{

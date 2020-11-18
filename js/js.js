@@ -43,7 +43,7 @@ function envio(){
     divEscribir.innerHTML = contenidoFinal; // almacenar
 
     let contenidoplus = " ";
-    divEscribir.innerHTML = contenidoFinal; // almacenar
+    divEscribir.innerHTML = contenidoplus; // almacenar
     contenidoplus = document.getElementById("final");
     contenidoplus = papaya.getNombre() + " --- " + papaya.getKilos + " --- " + papaya.getKilos();
     contenidoplus = frambuesa.getNombre() + " --- " + frambuesa.getKilos + " --- " + frambuesa.getKilos();
@@ -56,8 +56,16 @@ function envio(){
     contenidoplus = nispero.getNombre() + " --- " + nispero.getKilos + " --- " + nispero.getKilos();
     contenidoplus = guayaba.getNombre() + " --- " + guayaba.getKilos + " --- " + guayaba.getKilos();
     
+    ventana = window.open("", "pop-up", "width=500,height=300, toolbar=false, menubar=false, location=false");
+    ventana.document.write(contenidoFinal);
+    ventana.document.write("<input type=button value=Terminar pedido><br>");
+    ventana.document.write("<input type=button value=Volver>");
+
 
 }
+
+
+
 
 class Frutas{
     constructor(precio,kilos, nombre){
@@ -112,19 +120,16 @@ var aguacate  = new FrutasVerano("Aguacate",4.69 ,true);
 var nispero  = new FrutasVerano("nispero",5.38 ,true);
 var guayaba  = new FrutasInvierno("guayaba",14.95,false);
 
+
 function envioF(){
     ventana = window.open("", "pop-up", "width=500,height=300, toolbar=false, menubar=false, location=false");
-    let nombreF = document.getElementById("nombre").textContent;
-    let obtenN = nombreF.innerHTML;
+    let nombreF = document.getElementById("nombre").innerHTML;
 
+    let apellidoF = document.getElementById("apellidos").innerHTML;
 
-    let apellidoF = document.getElementById("apellidos").textContent;
-    let obtenN = document.innerHTML;
+    let direccionF = document.getElementById("direccion").innerHTML;
 
-    let direccionF = document.getElementById("direccion").textContent;
-    let obtenD = document.innerHTML;
-
-    ventana.document.write("Nombre: " + obtenN + "<br>");
+    ventana.document.write("Nombre: " + nombreF + "<br>");
     ventana.document.write("Apelldios: " + apellidoF + "<br>");
     ventana.document.write("Direccion: " + direccionF + "<br>");
     ventana.document.write("<button onclick='opener.cerrar();'>Cerrar</button>");
@@ -132,8 +137,8 @@ function envioF(){
 }
 
 
-
 /**
+ * 
  *  window.onload=() =>{
     let nombreF = document.getElementById("nombre").textContent;
     let obtenN = document.nombreF.innerHTML;
@@ -152,6 +157,19 @@ function envioF(){
         }
     }, false)
 }
- * 
- * 
+
+
  */
+
+/* FORMULARIO*/
+
+function Vnombre(){
+    var n = document.forms["Formulario"]["nombre"].value;
+    if(n == ""){
+        alert("No se ha rellenado");
+        return false;
+    }
+}
+
+
+
