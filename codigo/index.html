@@ -74,26 +74,29 @@
         <p>parte derecha</p>
     </div>
     <div id="ElFormulario">
-        <form name="Formulario">
+        <form id="formulario" method="GET" action="#" novalidate>
             <fieldset>
-                Nombre: <input type="text" name="nombre" placeholder="nombre"  id="nombre" minlength="4" maxlength="15" required >
-                Apellidos: <input type="text" name="apellidos" placeholder="apellidos" id="apelldios" required>
-                Direccion: <input type="email" name="correo" placeholder="@gmail.com" id="direccion" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
-                
+                <legend>Rellene el siguiente formulario</legend>
+                <p id="NombreP">Nombre: <input id="nombre" type="text" name="nombre" minlength="4" maxlength="15" required></p>
+                <p id="ApellidosP">Apellidos: <input type="text" id="apellidos" name="apellidos" required></p>
+                <p id="DireccionP">Dirección: <input type="text" name="direccion" required></p>
+                <p id="EmailP">Email: <input type="email" name="email" required></p>
+
+                <fieldset>
+                    <p>Forma de pago:<br>
+                       <p id="pagoPe">Entrega: <input type="radio" name="entrega" required></p>
+                       <p id="pago">Tarjeta:<input type="radio" name="entrega" required></p>
+                    </p>
+                    <p>Tarjeta cliente:<br>
+                        <p id="rr"><input id="si" type="radio" name="sino">Si</p>
+                        <p id="ee"><input id="no" type="radio" name="sino">No</p>
+                    </p>
+                </fieldset>
+
+                <input id="codigoTarjeta" type="hidden" name="codigo">
+                <input type="submit" value="Realizar pedido">
+                <button type="reset" value="Limpiar formulario">Limpiar formulario</button>
             </fieldset>
-            <fieldset>
-                ¿Pagas con tarjeta? <br>
-                <input type="radio" name="si" id="si">Si</input>
-                <input type="radio" name="no" id="no">No</input>
-            </fieldset>
-            <fieldset>
-                Agregar que campo si tienet tarjeta
-            </fieldset>
-            <fieldset>
-              <button type="submit" name="enviar" onclick="envioF();" onclick="return Vnombre();">Realizar pedido</button>
-              <input type="reset" name="limpiar"> limpiar</input>
-            </fieldset>
-    
         </form>
     </div>
 

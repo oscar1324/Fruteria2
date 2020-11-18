@@ -171,5 +171,90 @@ function Vnombre(){
     }
 }
 
+/**
+ * 
+ * 
+ * 
+ */
+window.onload = function(){
+    document.getElementById("formulario").addEventListener('submit',function(event){
+        let validar=validaciones(event);
+        if(validar){
+            ventana();
+            event.preventDefault();
+        }
+    },false);
+    document.getElementById("si").addEventListener('click',mostrarCodigoTarjeta,false);
+}
 
+function mostrarCodigoTarjeta(){
+    let codigo = document.getElementById("codigoTarjeta");
+    let botonSi = document.getElementById("si");
+    let botonNo = document.getElementById("no");
 
+    if(botonSi.checked){
+        
+    }
+}
+
+function ventana() {
+    let ventanita = window.open("", "pop-up", "width=500,height=300, toolbar=false, menubar=false, location=false");
+    ventanita.document.write(botoncin());
+    ventanita.document.write("<input type=button value=Terminar pedido><br>");
+    ventanita.document.write("<input type=button value=Volver>");
+}
+
+function validaciones(event){
+
+    /** VALICACIÓN DE NOMBRE */
+    var nombre = document.getElementById("nombre");
+    var nombreF= document.getElementById("NombreP"); 
+    if(!nombre.validity.valid){
+        nombreF.style.color = "red";
+        alert("Tienes que introducir el nombre");
+        event.preventDefault();
+        return false;
+    }
+
+    /** VALICACIÓN DE APELLIDO */
+    var apellidos = document.getElementById("apellidos");
+    var apellidosF= document.getElementById("ApellidosP"); 
+    if(!apellidos.validity.valid){
+        apellidosF.style.color = "red";
+        alert("Tienes que introducir el apellido");
+        event.preventDefault();
+        return false;
+    }
+
+    /** VALICACIÓN DE DIRECCION */
+    var direccion = document.getElementById("direccion");
+    var direccionP = document.getElementById("DireccionP");
+    if(!direccion.validity.valid){
+        direccionP.style.color = "red";
+        alert("Tienes que completar la dirección");
+        event.preventDefault();
+        return false;
+    }
+
+    /** VALICACIÓN DE EMAIL */
+    var email = document.getElementById("email");
+    var emailP = document.getElementById("EmailP");
+    if(!email.validity.valid){
+        emailP.style.color = "red";
+        alert("Tienes que rellenar el email");
+        event.preventDefault();
+        return false;
+    }
+
+    /** VALICACIÓN DE PAGO */
+    var pago = document.querySelector("input[name=entrega]:checked");
+    var pagoP = document.getElementById("pagoP");
+    if(!pago.validiti.valid){
+        pago.style.color = "red";
+        alert("Tienes que completar el campo");
+        event.preventDefault();
+        return false;
+    }
+
+    return true;
+}
